@@ -1,0 +1,75 @@
+html{
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+li{
+    list-style-type: none;
+}
+body{
+    background-color: floralwhite;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+.js-country__list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 70px;
+    max-width:600px;
+}
+.list__info{
+    padding: 20px 20px;
+    background-color: #fff;
+    border: 1px solid crimson;
+    border-right: unset ;
+    width: 175px;
+    text-align: center;
+}
+.list__info:last-child{
+    border-right: 1px solid crimson;
+}
+.list__number{
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+}
+.list__country{
+    font-family: 'Pacifico', cursive;
+    font-size: 16px;
+}
+.list__count{
+    font-family: 'Pacifico', cursive;
+    font-size: 16px;
+}
+.list__country-UA{
+    color: blue;
+}
+.list__country-WORLD{
+    color: red;
+}
+.list__capital-UA{
+    color: gold;
+}
+.list__capital-WORLD{
+    color: red;
+}
+
+.js-flowers__list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 70px;
+    max-width:600px;
+}
+
+.flowers__item{
+    font-family: 'Pacifico', cursive;
+    font-size: 36px;
+}
