@@ -21,7 +21,8 @@ body{
     align-items: center;
     margin: 0 auto;
     padding-top: 70px;
-    max-width:600px;
+    max-width:700px;
+    width: 100%;
 }
 .list__info{
     padding: 20px 20px;
@@ -30,22 +31,17 @@ body{
     border-right: unset ;
     width: 175px;
     text-align: center;
+
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
 }
 .list__info:last-child{
     border-right: 1px solid crimson;
 }
 .list__number{
-    font-family: 'Pacifico', cursive;
-    font-size: 20px;
+    font-size: 25px;
 }
-.list__country{
-    font-family: 'Pacifico', cursive;
-    font-size: 16px;
-}
-.list__count{
-    font-family: 'Pacifico', cursive;
-    font-size: 16px;
-}
+
 .list__country-UA{
     color: blue;
 }
@@ -65,11 +61,29 @@ body{
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    padding-top: 70px;
-    max-width:600px;
+
+}
+
+.flowers__list{
+    font-family: 'Pacifico', cursive;
+    font-size: 36px;
 }
 
 .flowers__item{
-    font-family: 'Pacifico', cursive;
-    font-size: 36px;
+    font-size: 30px;
+}
+.button__info{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 40px;
+}
+.btn{
+    padding: 20px;
+    border: none;
+    border-radius: 20%;
+    margin-right: 10px;
+}
+.btn:last-child{
+    margin-right: unset;
 }
