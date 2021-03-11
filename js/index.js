@@ -75,15 +75,22 @@ const createCountryList = country =>{
     const listNumberRef = document.createElement('li')
     listNumberRef.classList.add('list__number')
     listNumberRef.textContent = country.number
-    // console.log(listNumberRef)
 
     const listCountryRef = document.createElement('li')
     listCountryRef.classList.add('list__country')
     listCountryRef.textContent = country.country
 
+    if(country.country === 'Україна'){
+        listCountryRef.style.color = 'blue'
+    }
+
     const listCapitalRef = document.createElement('li')
     listCapitalRef.classList.add('list__capital')
     listCapitalRef.textContent = country.capital
+
+    if(country.capital === 'Київ'){
+        listCapitalRef.style.color = 'gold'
+    }
 
     const listCountRef = document.createElement('li')
     listCountRef.classList.add('list__count')
@@ -116,7 +123,6 @@ listRootRef.append(...allCountriesList)
 //2. Створити список в якому можна буде довільно змінювати колір для айтемів (палітра мінімум з 5 кольорів).
 
 //створюємо теги для елементів списку
-
 const flowers = [
     {
         name:'Rose'
@@ -168,14 +174,10 @@ const createFlowersList = (flower) => {
     const flowersItemRef = document.createElement('li')
     flowersItemRef.classList.add('flowers__item')
     flowersItemRef.textContent = `${flower.number}. ${flower.name}`
-
-
-
     flowersListRef.appendChild(flowersItemRef)
 
     return flowersListRef
 }
-
 
 // групуємо всі елементи масива 
 const allFlowers = addedNumberToFlowers.map(flower => createFlowersList(flower))
@@ -185,35 +187,28 @@ const allFlowersList = document.querySelector('.js-flowers__list')
 allFlowersList.append(...allFlowers)
 
 //додаємо функцію зміни кольору
-
 const colors = ['gold', '#ff9d33', '#8fa9dd', '#db239c', '#bb3ae5']
 
+//створюємо parent тег
 let buttonsList = document.createElement('div')
 buttonsList.classList.add('button__info')
 
+//створюємо кнопки і вішаємо onclick
 const createButtons = color =>{
 
-    const btn = document.createElement('button')
+    let btn = document.createElement('button')
     btn.classList.add('btn')
     btn.style.backgroundColor = color
+    btn.onclick =()=>{
+        allFlowersList.style.color = color
+    }
 
     buttonsList.append(btn)
 
     return buttonsList
 }
 
-const chooseColor = colors.map(color =>{
-    return color
-})
-
-console.log(chooseColor)
-
-
-
+//групуємо кнопки
 const allButtons = colors.map(color => createButtons(color))
 const allButtonsList = document.querySelector('.js-flowers__list')
 allButtonsList.append(...allButtons)
-
-allButtonsList.addEventListener('click', ()=>{
-    allFlowersList.style.color = chooseColor
-})

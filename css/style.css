@@ -15,6 +15,7 @@ body{
     font-size: 16px;
     line-height: 1.6;
 }
+/* task 1 */
 .js-country__list{
     display: flex;
     justify-content: center;
@@ -55,20 +56,18 @@ body{
     color: red;
 }
 
+/* task 2 */
 .js-flowers__list{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-
 }
-
 .flowers__list{
     font-family: 'Pacifico', cursive;
     font-size: 36px;
 }
-
 .flowers__item{
     font-size: 30px;
 }
@@ -83,6 +82,8 @@ body{
     border: none;
     border-radius: 20%;
     margin-right: 10px;
+    outline: unset;
+    cursor: pointer;
 }
 .btn:last-child{
     margin-right: unset;
