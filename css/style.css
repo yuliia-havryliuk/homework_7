@@ -86,7 +86,12 @@ body{
     margin-right: 10px;
     outline: unset;
     cursor: pointer;
+    transition: .3s;
 }
+.btn:active {
+    transform: translateY(5px);
+    transition: .3s;
+ }
 .btn:last-child{
     margin-right: unset;
 }
